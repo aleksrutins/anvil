@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Anvil.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Anvil"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ContentDialog x:Name="logInDialog"
+                       Title="Log In to GitHub"
+                       PrimaryButtonText="Log In"
+                       SecondaryButtonText="Cancel">
+            <RichTextBlock>
+                <Paragraph>Enter your personal access token (PAT) to log in to GitHub.</Paragraph>
+                <Paragraph>Visit
+                    <Hyperlink NavigateUri="https://github.com/settings/tokens/new">this link</Hyperlink>
+                    to generate one. Select the
+                    <Bold>notifications</Bold> scope.
+                </Paragraph>
+            </RichTextBlock>
+        </ContentDialog>
+        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+    </StackPanel>
+</Window>
